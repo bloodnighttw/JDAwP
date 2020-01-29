@@ -22,8 +22,8 @@
                 </repository>
                 <repository>
                     <id>github</id>
-                    <name>GitHub OWNER Apache Maven Packages</name>
-                    <url>https://maven.pkg.github.com/OWNER </url>
+                    <name>JDAwP</name>
+                    <url>https://maven.pkg.github.com/bloodnighttw </url>
                 </repository>
             </repositories>
         </profile>
