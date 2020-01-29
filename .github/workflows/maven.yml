@@ -6,6 +6,9 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
+    env:
+      GITHUB_USERNAME: x-access-token
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN
 
     steps:
     - uses: actions/checkout@v1
@@ -17,6 +20,4 @@ jobs:
       run: mvn -B package --file pom.xml
     - name: deploy
       run: 
-        mkdir ~/.m2
-        echo "<settings><servers><server><id>github</id><username>bloodnighttw</username><password>${GITHUB_TOKEN}</password></server></servers></settings>" > ~/.m2/settings.xml
-        mvn deploy
+        mvn --settings settings.xml deploy
