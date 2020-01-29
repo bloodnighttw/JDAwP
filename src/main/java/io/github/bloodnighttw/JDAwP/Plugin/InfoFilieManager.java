@@ -23,17 +23,16 @@ public class InfoFilieManager {
         Gson gson=new Gson();
         PluginInfo infoFile=null;
         try {
-            String st="";
+            StringBuilder st= new StringBuilder();
             Scanner sc=new Scanner(new URL("jar:file:"+path+"!/info.json").openStream());
             for(int i=0;i<50;i++){
                 try {
-                    st=st+sc.nextLine()+"\n";
+                    st.append(sc.nextLine()).append("\n");
                 }catch (NoSuchElementException e){
                     break;
                 }
             }
-            //System.out.println(st);
-            infoFile=gson.fromJson(st,PluginInfo.class);
+            infoFile=gson.fromJson(st.toString(),PluginInfo.class);
         } catch (IOException e) {
             e.printStackTrace();
         }
