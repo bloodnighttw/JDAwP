@@ -6,7 +6,7 @@
 
     <groupId>io.github.bloodnighttw</groupId>
     <artifactId>JDAwP</artifactId>
-    <version>0.0-SNAPSHOT</version>
+    <version>0.01_09-SNAPSHOT</version>
     <repositories>
    	<repository>
     		<id>jcenter</id>
