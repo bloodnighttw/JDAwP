@@ -113,7 +113,7 @@ under the License.
     <server>
 	<id>github</id>
 	<username>bloodnighttw</username>
-	<password>${{ secrets.Password }}</password>
+	<password>${env.GITHUB_TOKEN}</password>
 
     </server>
   </servers>
