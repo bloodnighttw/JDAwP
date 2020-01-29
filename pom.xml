@@ -7,6 +7,17 @@
     <groupId>io.github.bloodnighttw</groupId>
     <artifactId>JDAwP</artifactId>
     <version>0.0.01-SNAPSHOT</version>
+	
+    <distributionManagement>
+     	<repository>
+      		<uniqueVersion>false</uniqueVersion>
+      		<id>bloodnighttw</id>
+      		<name>JDAwP</name>
+      		<url>scp://repo/maven2</url>
+      		<layout>default</layout>
+    	</repository>
+    </distributionManagement>
+	
     <repositories>
    	<repository>
     		<id>jcenter</id>
