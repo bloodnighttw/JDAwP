@@ -18,7 +18,10 @@ jobs:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
     - name: Build with Maven
       run: 
-        mvn -B package --file pom.xml
+        mvn install
     - name: deploy to maven repo
       run: 
         mvn --settings settings.xml deploy
+
+
+
