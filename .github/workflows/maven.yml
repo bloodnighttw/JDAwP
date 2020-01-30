@@ -22,3 +22,6 @@ jobs:
     - name: deploy to maven repo
       run: 
         mvn --settings settings.xml deploy
+
+
+
