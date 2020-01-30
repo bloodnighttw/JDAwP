@@ -37,7 +37,6 @@ public class InfoFilieManager {
             e.printStackTrace();
         }
 
-
         return infoFile;
     }
 

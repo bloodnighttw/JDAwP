@@ -26,8 +26,6 @@ public class PluginLoader {
          PluginInfo pi=ifm.getInfoFile(path);
          Class<?> clazz=urlClassLoader.loadClass(pi.getMainClass());
 
-
-
          ExtendPoint ep = null;
 
          try {
