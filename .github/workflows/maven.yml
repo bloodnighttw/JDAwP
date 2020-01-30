@@ -19,9 +19,5 @@ jobs:
     - name: Build with Maven
       run: 
         mvn -B package --file pom.xml
-    - name: deploy to maven repo
-      run: 
-        mvn --settings settings.xml deploy
-
 
 
