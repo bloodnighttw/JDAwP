@@ -12,8 +12,12 @@ public class Path {
 
     private String path=null;
     private static Path instance;
+    private String syntax="/";
 
     private Path() throws URISyntaxException {
+        if(System.getProperty("os.name").equals("Windows"))
+            syntax="\\";
+
         File file=new File(getPath()+"plugins");
         file.mkdir();
     }
@@ -27,12 +31,13 @@ public class Path {
     public String getPath() throws URISyntaxException {
 
         if(path==null) {
+
             path = Path.class.getProtectionDomain().getCodeSource().getLocation().toURI().getPath();
-            String[] cache=path.split("/");
+            String[] cache=path.split(syntax);
             StringBuilder cache2= new StringBuilder();
             for(String st:cache){
                 if(!st.endsWith(".jar")){
-                    cache2.append(st).append("/");
+                    cache2.append(st).append(syntax);
                 }
             }
             path= cache2.toString();
@@ -49,16 +54,16 @@ public class Path {
         LinkedList<String> linkedList=new LinkedList<String>();
 
         for(File f:listFile) {
-            //System.out.println(f.getPath());
+
+
             if (f.getPath().endsWith(".jar")) {
-                //linkedList.add(f.getPath());
 
                 File file = new File("jar:file:" + f.getPath());
 
                 InputStream ip;
 
                 try {
-                    URL url = new URL(file.getPath() + "!/info.json");
+                    URL url = new URL(file.getPath() + "!"+syntax+"info.json");
                     ip=url.openStream();
                     ip.close();
                 } catch (MalformedURLException e) {
@@ -70,15 +75,12 @@ public class Path {
                     continue;
                 }
 
-
-
-
                 linkedList.add(f.getPath());
 
             }
         }
 
-        return (String[]) linkedList.toArray(new String[linkedList.size()]);
+        return (String[]) linkedList.toArray(new String[0]);
 
     }
 }
