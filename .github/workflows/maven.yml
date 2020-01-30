@@ -23,6 +23,7 @@ jobs:
       uses: actions/upload-artifact@v1
       with:
         name: JDAwP
-        path: /home/runner/work/JDAwP/JDAwP/target/JDAwP-1.0.0_2.jar
+        path: /home/runner/work/JDAwP/JDAwP/target/ /home/runner/work/JDAwP/JDAwP/
+        
 
 
