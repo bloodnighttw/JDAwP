@@ -1,5 +1,7 @@
 ## JDAwP ![Java CI](https://github.com/bloodnighttw/JDAwP/workflows/Java%20CI/badge.svg)
-A Discord Bot Server with Plugin Framweork.Based on JDA.
+It is a plugin framework for discord bot using JDA(Java discord api),you can host your bot on your computer or raspberry pi  easily.
+And you can port your code from JDA to JDAwP easily. 
+
 
 Download [[Here](https://github.com/bloodnighttw/JDAwP/blob/master/out/artifacts/JDAwithPlugin2_jar/JDAwithPlugin.jar?raw=true)]
 
