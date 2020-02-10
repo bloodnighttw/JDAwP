@@ -30,4 +30,13 @@
     <activeProfiles>
         <activeProfile>bintray</activeProfile>
     </activeProfiles>
+          
+    <servers>
+          <server>
+                    <id>bintray-repo-maven-example</id>
+                    <username>bloodnighttw</username>
+                    <password>***my-top-secret-api-key***</password>
+          </server>
+    </servers>
+          
 </settings>
