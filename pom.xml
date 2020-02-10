@@ -7,6 +7,13 @@
     <groupId>io.github.bloodnighttw.JDAwP</groupId>
     <artifactId>JDAwP</artifactId>
     <version>1.0.0_2</version>
+         
+    <distributionManagement>
+         <repository>
+             <id>bintray-repo-maven-example</id>
+             <url>https://api.bintray.com/maven/bloodnighttw/JDAwP/JDAwP/;publish=1</url>
+         </repository>
+    </distributionManagement>
 
 
     <repositories>
