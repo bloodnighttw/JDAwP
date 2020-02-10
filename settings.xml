@@ -1,41 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <settings xsi:schemaLocation='http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd'
           xmlns='http://maven.apache.org/SETTINGS/1.0.0' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'>
-    
-    <profiles>
-        <profile>
-            <repositories>
-                <repository>
-                    <snapshots>
-                        <enabled>false</enabled>
-                    </snapshots>
-                    <id>bintray-bloodnighttw-JDAwP</id>
-                    <name>bintray</name>
-                    <url>https://dl.bintray.com/bloodnighttw/JDAwP</url>
-                </repository>
-            </repositories>
-            <pluginRepositories>
-                <pluginRepository>
-                    <snapshots>
-                        <enabled>false</enabled>
-                    </snapshots>
-                    <id>bintray-bloodnighttw-JDAwP</id>
-                    <name>bintray-plugins</name>
-                    <url>https://dl.bintray.com/bloodnighttw/JDAwP</url>
-                </pluginRepository>
-            </pluginRepositories>
-            <id>bintray</id>
-        </profile>
-    </profiles>
-    <activeProfiles>
-        <activeProfile>bintray</activeProfile>
-    </activeProfiles>
-          
     <servers>
           <server>
                     <id>bintray-repo-maven-example</id>
                     <username>bloodnighttw</username>
-                    <password>***my-top-secret-api-key***</password>
+                    <password>${env.GITHUB_TOKEN}</password>
           </server>
     </servers>
           
