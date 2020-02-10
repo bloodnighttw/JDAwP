@@ -26,7 +26,7 @@ jobs:
         path: /home/runner/work/JDAwP/JDAwP/target/
     - name: Deploy
       run:  
-        mvn --settings settings.xml deploy
+        mvn deploy --settings settings.xml
         
 
 
